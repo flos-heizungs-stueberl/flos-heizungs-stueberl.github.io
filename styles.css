@@ -64,7 +64,8 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
   body{background-attachment:scroll}
   /* Reduce overlay opacity on mobile so background is more visible */
   .wrap{background:rgba(0,0,0,0.25)}
-  .hero{background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/Logos/Untersberg-small.webp')}
+  /* Use existing JPG for mobile fallback */
+  .hero{background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/Logos/Untersberg.jpg')}
 }
 
 @media(min-width:601px) and (max-width:900px){
