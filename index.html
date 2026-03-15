@@ -3,155 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Flos Heizungsstüberl — Marktschellenberg</title>
-  <link rel="stylesheet" href="styles.css">
-  <!-- preload main background image to help mobile browsers load it earlier -->
-  <link rel="preload" as="image" href="/Logos/Untersberg.jpg">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-  <meta name="description" content="Flos Heizungsstüberl in Marktschellenberg — Bistro, Bier & sonntägliches Daydrinking. Speisekarte, Veranstaltungen & Reservierung.">
+  <title>Vorübergehend geschlossen — Flos Heizungsstüberl</title>
+  <style>
+    :root{--accent:#d6452a}
+    html,body{height:100%;margin:0;font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    body{
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('Logos/Untersberg.jpg');
+      background-size:cover;background-position:center;background-attachment:fixed;color:#fff;display:flex;align-items:center;justify-content:center;
+    }
+    .overlay{width:100%;max-width:900px;padding:3rem;border-radius:12px;background:rgba(0,0,0,0.35);text-align:center}
+    h1{font-size:clamp(1.6rem,4.5vw,3.2rem);margin:0 0 1rem 0;line-height:1.05}
+    p.lead{opacity:.9;margin:0 0 1.6rem 0;font-size:1.05rem}
+    .countdown{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
+    .countdown .unit{background:rgba(255,255,255,0.06);padding:1rem 1.2rem;border-radius:10px;min-width:88px}
+    .countdown .num{font-size:1.6rem;font-weight:700}
+    .countdown .label{font-size:0.85rem;opacity:.85}
+    a.link{display:inline-block;margin-top:1.2rem;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+    @media(max-width:600px){
+      body{background-attachment:scroll}
+      .overlay{padding:1.2rem;margin:1rem;border-radius:10px}
+      .countdown .unit{min-width:72px;padding:.8rem}
+    }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="wrap">
-      <a class="brand" href="/">Flos Heizungsstüberl</a>
-      <button class="nav-toggle" aria-expanded="false" aria-label="Menü"><span class="hamburger"></span></button>
-      <nav id="main-nav">
-        <a href="/">Start</a>
-        <a href="speisekarte.html">Speisekarte</a>
-        <a href="veranstaltungen.html">Veranstaltungen</a>
-        <a href="stammtisch.html">Stammtisch</a>
-        <a href="hochzeiten.html">Hochzeiten</a>
-        <a href="gallery.html">Galerie</a>
-        <a href="ueber-uns.html">Über uns</a>
-        <a href="kontakt.html" class="cta">Kontakt</a>
-      </nav>
+  <div class="overlay" role="main">
+    <h1>Die Tränke hat vorübergehend geschlossen</h1>
+    <p class="lead">Wir sind bald wieder für euch da — bis dahin zählt der Rückwärtszähler.</p>
+
+    <div class="countdown" aria-live="polite" id="countdown">
+      <div class="unit"><div class="num" id="days">--</div><div class="label">Tage</div></div>
+      <div class="unit"><div class="num" id="hours">--</div><div class="label">Stunden</div></div>
+      <div class="unit"><div class="num" id="minutes">--</div><div class="label">Minuten</div></div>
+      <div class="unit"><div class="num" id="seconds">--</div><div class="label">Sekunden</div></div>
     </div>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="wrap hero-inner">
-        <div class="hero-text">
-          <h1 class="slogan">Flos Heizungsstüberl — Heißer Ofen, kaltes Bier, laute Stimmung</h1>
-          <p class="buttons">
-            <a href="speisekarte.html" class="btn">Speisekarte ansehen</a>
-            <a href="veranstaltungen.html" class="btn ghost">Events &amp; Termine</a>
-          </p>
-        </div>
-        <div class="hero-image">
-          <!-- Verwende Flo-Logo im Hero -->
-          <img src="Bilder/Logo_Flo.png" alt="Flos Logo" loading="eager">
-        </div>
-      </div>
-    </section>
-
-    <section class="info wrap">
-      <div class="col">
-        <h3>Öffnungszeiten</h3>
-        <ul>
-          <li>Mo–Sa: 17:00–22:00</li>
-          <li>So: 12:00–23:00 — Sonntags: Daydrinking Deluxe ab 12 Uhr</li>
-        </ul>
-        <p class="highlight">Mittwochs: Goaßenmaß‑Special — Eck Michi mixt die legendäre Goaßenmaß für echte Kenner.</p>
-        <!-- Michi Porträt neben dem Special -->
-        <img src="Bilder/Michi_portraet.jpg" alt="Michi Portrait" style="width:120px;border-radius:8px;margin-top:0.6rem">
-      </div>
-      <div class="col">
-        <h3>Was dich erwartet</h3>
-        <p>Typisch bayerische Küche, herzliche Atmosphäre und jede Menge Aperol. Laura Berg kocht — gute Laune inklusive. Wanderer sind herzlich willkommen auf ein kühles Bier.</p>
-        <p class="fun">Aperol im Stüberl, Untersberg im Blick: So schmeckt der Oimberg‑Sommer</p>
-        <!-- Hofbräuhaus Logo weiter unten in diesem Abschnitt -->
-        <img src="Logos/Hofbrauhaus_Berchtesgaden.jpg" alt="Hofbräuhaus Berchtesgaden" style="width:140px;margin-top:0.8rem;border-radius:8px">
-      </div>
-    </section>
-
-    <section class="about wrap">
-      <h2>Über uns</h2>
-      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
-        <div style="flex:1">
-          <p>Laura und Flo — die Köpfe hinter dem Heizungsstüberl. Deftige Küche, warme Heizung, laute Musik und ein Herz für Wanderer.</p>
-          <p><a href="ueber-uns.html" class="btn">Mehr erfahren → Über uns</a></p>
-        </div>
-        <div style="flex:0 0 140px">
-          <img src="Bilder/Flo_portraet_2.jpg" alt="Flo" style="width:140px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.3)">
-        </div>
-      </div>
-    </section>
-
-    <section class="cta-cards wrap">
-      <article>
-        <h4>Stammtisch</h4>
-        <p>Platz für maximal 30 Personen in der Heizung — reserviere deinen Tisch.</p>
-        <p><a href="stammtisch.html" class="link">Mehr erfahren</a></p>
-      </article>
-      <article>
-        <h4>Garten &amp; Hochzeiten</h4>
-        <p>Feiern im Freien für bis zu 150 Personen — Hochzeitsbuchungen möglich.</p>
-        <p><a href="hochzeiten.html" class="link">Anfragen</a></p>
-      </article>
-    </section>
-
-    <section class="instagram wrap">
-      <h3>Folgt uns</h3>
-      <p>Flo: <a href="https://www.instagram.com/floaschauer?igsh=bDdkb3ZwdTlyeHhu" target="_blank">@floaschauer</a> • Laura: <a href="https://www.instagram.com/_lauramaria__?igsh=Y3BoZnE2eTNtZHJj" target="_blank">@_lauramaria__</a></p>
-    </section>
-
-    <!-- Partner-Logos jetzt am Seitenende -->
-    <section class="partners wrap">
-      <h2>Unsere Freunde &amp; Sponsoren</h2>
-      <div class="partner-logos">
-        <a href="https://www.hofbrauhaus-berchtesgaden.shop/" target="_blank" rel="noopener">
-          <img src="Logos/Hofbrauhaus_Berchtesgaden.jpg" alt="Hofbräuhaus Berchtesgaden" loading="lazy">
-        </a>
-        <a href="https://www.franziskaner-weissbier.de/" target="_blank" rel="noopener">
-          <img src="Logos/franziskaner.jpg" alt="Franziskaner Weißbier">
-        </a>
-        <a href="https://www.hargassner.com/de-de" target="_blank" rel="noopener">
-          <img src="Logos/Hargassner.jpg" alt="Hargassner Heizung">
-        </a>
-      </div>
-      <div class="partner-links" style="margin-top:0.8rem">
-        <a href="https://www.hofbrauhaus-berchtesgaden.shop/" target="_blank">Hofbräuhaus Berchtesgaden</a> • 
-        <a href="https://www.franziskaner-weissbier.de/" target="_blank">Franziskaner Weißbier</a> • 
-        <a href="https://www.hargassner.com/de-de" target="_blank">Hargassner</a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="wrap">
-      <p>Flos Heizungsstüberl — Hinterettenberg 8, 83487 Marktschellenberg • <a href="gallery.html">Galerie</a> • <a href="impressum.html">Impressum</a></p>
-    </div>
-  </footer>
+  </div>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function(){
-      document.querySelectorAll('img[loading="lazy"]').forEach(function(img){
-        img.addEventListener('load', function(){ img.classList.add('loaded'); });
-      });
-
-      // Mobile nav toggle
-      var navToggle = document.querySelector('.nav-toggle');
-      var nav = document.getElementById('main-nav');
-      function closeNav(){
-        if(nav){ nav.classList.remove('open'); }
-        if(navToggle){ navToggle.classList.remove('open'); navToggle.setAttribute('aria-expanded','false'); }
+    // Ziel: 5. April 2026, 14:00 MESZ (UTC+2) -> UTC 2026-04-05 12:00:00Z
+    var target = Date.UTC(2026,3,5,12,0,0); // months: 0=Jan, so 3=April
+    function update(){
+      var now = Date.now();
+      var diff = target - now;
+      if(diff <= 0){
+        document.getElementById('countdown').innerHTML = '<div style="font-weight:700;font-size:1.2rem">Die Tränke ist wieder geöffnet!</div>';
+        clearInterval(timer);
+        return;
       }
-      if(navToggle && nav){
-        navToggle.addEventListener('click', function(e){
-          e.preventDefault();
-          var isOpen = nav.classList.toggle('open');
-          navToggle.classList.toggle('open', isOpen);
-          navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-        });
-        // Close nav on resize to desktop
-        window.addEventListener('resize', function(){ if(window.innerWidth > 600){ closeNav(); } });
-        // Optional: close when clicking outside the nav on mobile
-        document.addEventListener('click', function(e){
-          if(!nav.contains(e.target) && !navToggle.contains(e.target) && nav.classList.contains('open')){ closeNav(); }
-        });
-      }
-    });
+      var s = Math.floor(diff/1000);
+      var days = Math.floor(s/86400); s -= days*86400;
+      var hours = Math.floor(s/3600); s -= hours*3600;
+      var minutes = Math.floor(s/60); var seconds = s - minutes*60;
+      document.getElementById('days').textContent = String(days);
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+    }
+    update();
+    var timer = setInterval(update,1000);
   </script>
 </body>
 </html>
