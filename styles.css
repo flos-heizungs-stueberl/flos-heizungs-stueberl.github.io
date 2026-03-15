@@ -108,6 +108,8 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
   nav{flex-wrap:wrap}
 }
 
+/* Ensure gallery images are always visible on mobile/blocked-image fallback: force display */
+.gallery-grid img{opacity:1 !important;visibility:visible !important}
 /* Ensure images never overflow */
 img{max-width:100%;height:auto;display:block}
 
