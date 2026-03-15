@@ -11,6 +11,19 @@ body{font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif;mar
 .brand{font-family:Montserrat,Plaster,Inter,serif;font-size:1.6rem;color:var(--accent);text-decoration:none}
 nav a{margin-left:1rem;color:var(--text);text-decoration:none}
 nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8px}
+
+/* Mobile hamburger button */
+.nav-toggle{display:none;background:transparent;border:0;padding:.5rem;border-radius:8px;color:var(--text)}
+.nav-toggle .hamburger{display:block;width:22px;height:2px;background:var(--text);position:relative}
+.nav-toggle .hamburger::before,.nav-toggle .hamburger::after{content:'';display:block;width:22px;height:2px;background:var(--text);position:absolute;left:0}
+.nav-toggle .hamburger::before{top:-7px}
+.nav-toggle .hamburger::after{top:7px}
+
+/* When open, animate to X */
+.nav-toggle.open .hamburger{background:transparent}
+.nav-toggle.open .hamburger::before{transform:rotate(45deg);top:0}
+.nav-toggle.open .hamburger::after{transform:rotate(-45deg);top:0}
+
 .hero{padding:3rem 0; color:var(--text); position:relative}
 /* Use correct filename for hero background as well */
 .hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('/Logos/Untersberg.jpg');background-size:cover;background-position:center}
@@ -45,8 +58,13 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
   .wrap{padding:1rem;border-radius:8px}
   .site-header .wrap{flex-direction:row;align-items:center;gap:.5rem}
   .brand{font-size:1.2rem}
-  nav{display:flex;flex-direction:column;gap:.5rem;margin-top:.5rem}
-  nav a{margin-left:0;padding:.5rem .6rem;border-radius:8px;background:rgba(255,255,255,0.03)}
+  /* show hamburger and hide nav by default on mobile */
+  .nav-toggle{display:inline-flex;align-items:center;justify-content:center}
+  nav{display:none;flex-direction:column;gap:.5rem;margin-top:.5rem}
+  nav.open{display:flex}
+  nav a{margin-left:0;padding:.6rem .8rem;border-radius:8px;background:rgba(255,255,255,0.03)}
+  nav a.cta{margin-top:.25rem}
+
   .hero-inner{flex-direction:column-reverse;gap:1rem}
   .slogan{font-size:1.4rem}
   .lead{font-size:1rem}
