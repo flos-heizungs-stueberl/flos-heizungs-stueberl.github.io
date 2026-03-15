@@ -2,8 +2,9 @@
 :root{--wrap:1100px;--accent:#d6452a;--muted:#bfc7cc;--bg:#0b0b0b;--text:#ffffff}
 *{box-sizing:border-box}
 body{font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:var(--text);
-  background-image: linear-gradient(rgba(8,8,8,0.75), rgba(8,8,8,0.8)), url('Logos/untersberg.jpg');
-  background-size:cover;background-position:center;background-attachment:fixed;}
+  /* Correct filename case: 'Untersberg.jpg' exists in Logos/ */
+  background-image: linear-gradient(rgba(8,8,8,0.75), rgba(8,8,8,0.8)), url('Logos/Untersberg.jpg');
+  background-size:cover;background-position:center;background-attachment:scroll;}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:2rem;background:rgba(0,0,0,0.45);border-radius:12px}
 .site-header{background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(255,255,255,.04)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between}
@@ -11,9 +12,9 @@ body{font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif;mar
 nav a{margin-left:1rem;color:var(--text);text-decoration:none}
 nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8px}
 .hero{padding:3rem 0; color:var(--text); position:relative}
-.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('Logos/untersberg.jpg');background-size:cover;background-position:center}
+/* Use correct filename for hero background as well */
+.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('Logos/Untersberg.jpg');background-size:cover;background-position:center}
 .hero-inner{display:flex;gap:2rem;align-items:center}
-.hero-text{flex:1}
 .slogan{font-family:Montserrat,Plaster,Inter,serif;font-size:2.2rem;color:#fff;margin:0 0 1rem;letter-spacing:0.2px;text-shadow:0 6px 20px rgba(0,0,0,.7)}
 .lead{font-size:1.05rem;opacity:.95}
 .buttons .btn{display:inline-block;margin-right:.6rem;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
@@ -59,6 +60,8 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
   .cta-cards{grid-template-columns:1fr}
   .menu li{font-size:1rem}
   .map-wrapper{padding-bottom:56.25%}
+  /* mobile: avoid fixed backgrounds for performance and compatibility */
+  body{background-attachment:scroll}
 }
 
 @media(min-width:601px) and (max-width:900px){
