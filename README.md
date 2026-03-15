@@ -1,70 +1,57 @@
 # Flos Heizungsstüberl — GitHub Pages Website
 
-Kurze Anleitung und Hinweise zum Projekt (erste Entwurfs‑Website).
+Kurzbeschreibung und aktueller Stand der statischen Website.
 
-## Was ist hier
-- Statische Website für Flos Heizungsstüberl (GitHub Pages).
-- Enthaltene Seiten: `index.html`, `speisekarte.html`, `veranstaltungen.html`, `stammtisch.html`, `hochzeiten.html`, `kontakt.html`, `gallery.html`, `impressum.html`.
+## Inhalt des Repos
+- Statische Website für Flos Heizungsstüberl (für GitHub Pages).
+- Enthaltene Seiten: `index.html`, `speisekarte.html`, `veranstaltungen.html`, `stammtisch.html`, `hochzeiten.html`, `kontakt.html`, `gallery.html`, `ueber-uns.html`, `impressum.html`.
 - Styling: `styles.css`.
-- Platz für Logos / Bilder: `Logos/` (lege hier `untersberg.jpg`, `hofbrauhaus_berchtesgaden.jpg`, `franziskaner.jpg`, `hargassner.jpg`, `Laura_Berg.jpg` ab).
+- Medienordner: `Bilder/`, `Logos/`, `Videos/` (lokale Bilder und Videos sind bereits eingebunden).
 
-## Schnellstart lokal (PowerShell)
-1. Im Projektordner prüfen:
-   ```powershell
-   cd 'c:\Users\s1u21oc\OneDrive - Volkswagen AG\Dokumente\10_Projekte\2026_homepage_test\flos-heizungs-stueberl.github.io'
-   ```
-2. Änderungen committen (wenn noch nicht gemacht):
+## Aktueller Stand
+- Design: modernes, responsives Layout mit einheitlichem Header auf allen Seiten.
+- Inhalte: alle Hauptseiten sind erstellt und lokal angepasst (Navigation, Galerie, Veranstaltungen, Über‑uns‑Seite, Kontaktformular, Hochzeitsanfrage).
+- Mobile: mehrere Optimierungen vorgenommen (siehe Abschnitt "Mobile Optimierungen").
+- Hinweis: Alle Änderungen wurden lokal umgesetzt. Es erfolgt erst ein Commit & Push, wenn du explizit zustimmst.
+
+## Schnellstart lokal
+1. Öffne ein Terminal und wechsel in das Projektverzeichnis (Projekt-Root).
+2. Vorschau:
+   - Einfach: Datei `index.html` im Browser öffnen.
+   - Alternativ (lokaler HTTP‑Server):
+     - Python: `python -m http.server 8000` und dann im Browser `http://localhost:8000` öffnen.
+     - Oder benutze eine Live‑Server-Erweiterung in deinem Editor.
+3. Git‑Workflow (Beispiele):
    ```bash
    git add -A
    git commit -m "Update site"
+   git push origin main
    ```
-3. Push (bereits eingerichtet):
-   ```bash
-   git push
-   ```
+   (Die finale Commit/Pull/Push‑Aktion wird erst nach deiner Freigabe ausgeführt.)
 
-## Temporären Commit‑Author nur für einen Commit setzen
-- Einmalig beim Commit (ändert nicht die globalen Einstellungen):
-  ```bash
-  git commit --author="flos-heizungs-stueberl <ponnei@gmx.de>" -m "Commit message"
-  ```
-- Oder temporär für einen Befehl:
-  ```bash
-  git -c user.name="flos-heizungs-stueberl" -c user.email="ponnei@gmx.de" commit -m "Commit message"
-  ```
-
-## GitHub Pages aktivieren
-- Repository → Settings → Pages (oder Code and automation → Pages): Source = Branch `main`, Folder = `/ (root)` auswählen.
-- Bei `username.github.io` wird die Seite unter `https://username.github.io/` veröffentlicht.
-
-## Eigene Domain (optional, kostenlos aber DNS‑Änderungen nötig)
-- Datei `CNAME` im Repo mit der Domain (z. B. `www.deinedomain.de`) anlegen.
-- DNS: Setze A‑Records auf GitHub IPs oder CNAME auf `username.github.io` (siehe GitHub Pages‑Doku).
-
-## Formulare & WhatsApp
-- Kontakt- / Event-Formulare nutzen FormSubmit (FormSubmit leitet Mails an `ponnei@gmx.de`).
-- Für direkte WhatsApp‑Anfragen ist ein Button integriert (`kontakt.html`) mit Link `https://wa.me/491718906893?text=...` — öffnet WhatsApp am Gerät.
-- Für automatisches WhatsApp (Empfang von Formularen) brauchst du Dienste wie Twilio + Zapier/Make (kostenpflichtig & DSGVO‑Pflichten beachten).
+## Formulare & Kontaktlinks
+- Die auf der Seiten verwendeten Formulare senden an die in den Formular-Elementen hinterlegten Ziele. Prüfe bei Bedarf die `action`‑Attribute in den jeweiligen HTML‑Dateien.
+- Der WhatsApp‑Link ist als Platzhalter in `kontakt.html` hinterlegt; passe die Zielnummer dort an, falls nötig.
 
 ## Bilder & Logos
-- Lege die endgültigen Logos/Bilder in `Logos/` ab. Benutze gleiche Dateinamen wie in HTML (z. B. `hofbrauhaus_berchtesgaden.jpg`).
-- Bilder sollten lizenzfrei oder von dir freigegeben sein (achtung Markenlogos).
+- Lege endgültige Logos/Bilder in `Logos/` bzw. in `Bilder/` ab. Verwende die in den HTML‑Dateien referenzierten Dateinamen.
+- Empfehlung: Für bessere Ladezeiten Mobile‑optimierte Versionen (WebP/JPEG in kleinerer Auflösung) und `srcset` verwenden.
 
-## Google Maps / Google Business
-- Um in Google Maps als Unternehmen zu erscheinen: Erstelle ein Google Business Profile (kostenlos), bestätige Adresse/Telefon (Postkarte oder Telefon) und fülle Öffnungszeiten/Infos aus.
+## Mobile Optimierungen — durchgeführt
+- Hintergrund: auf mobilen Geräten wird `background-attachment: scroll` verwendet, Overlay‑Opacity reduziert für bessere Lesbarkeit.
+- Hero: responsive (Bild skaliert, Textgröße angepasst für kleine Displays).
+- Navigation: Hamburger‑Pattern für kleine Bildschirme (nav versteckt/ausklappbar).
+- Bilder: Lazy‑Loading eingesetzt, Lazy‑Helper so angepasst, dass Bilder nicht unsichtbar bleiben, falls JS nicht greift.
 
-## Rechtliches (Deutschland)
-- Impressum & Datenschutzerklärung sind erforderlich. Prüfe die Angaben in `impressum.html` und ergänze ggf. USt‑ID, Betreiberdaten, Verantwortlichen.
+## Mobile Optimierungen — Empfehlungen
+- Bildformate: Erzeuge mobile WebP/AVIF Varianten und nutze `srcset`/`sizes` für schnellere Ladezeiten.
+- Kritische CSS: Falls weitere Performance nötig ist, extrahiere kritische CSS für den First Paint.
+- Script‑Defer: Nicht-kritische Skripte `defer` oder ans Ende setzen.
+- Test: Auf langsamen Mobilfunkverbindungen testen (Throttling, Lighthouse) und ggf. Hero‑Bild weiter verkleinern.
 
-## Weiteres / Tipps
-- Mobile testen: Cache leeren, ggf. `?v=1` an CSS hängen beim Entwickeln (z. B. `styles.css?v=2`) um Browsercache zu umgehen.
-- SEO: Metatags & OpenGraph ergänzen (optional).
-- Wenn du willst, erstelle ich ein README‑Release, eine Sitemap oder helfe bei DNS/Domain‑Einrichtung.
+## Rechtliches / Hinweise
+- Prüfe Impressum & Datenschutzerklärung auf Vollständigkeit und Richtigkeit.
+- Achte bei Verwendung von Markenlogos auf rechtliche Nutzungsbedingungen.
 
-## Kontakt
-- Bei Fragen zur Implementierung oder wenn du Bilder/Logos hochlädst, sag mir Bescheid — ich übernehme die Integration.
-
----
-
-Kurzer Entwicklungsstand: erste Version live gepusht (Branch `main`).
+Wenn du möchtest, übernehme ich das Committen & Pushen mit einem temporären Author‑Attribut — antworte dazu mit „Freigabe“. Wenn du noch Inhalte oder weitere Mobile‑Anpassungen willst, nenne bitte die gewünschten Änderungen kurz.
 

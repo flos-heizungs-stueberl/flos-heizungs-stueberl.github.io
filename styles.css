@@ -2,14 +2,14 @@
 :root{--wrap:1100px;--accent:#d6452a;--muted:#bfc7cc;--bg:#0b0b0b;--text:#ffffff}
 *{box-sizing:border-box}
 body{font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:var(--text);
-  /* Correct filename case: 'Untersberg.jpg' exists in Logos/ */
-  background-image: linear-gradient(rgba(8,8,8,0.75), rgba(8,8,8,0.8)), url('/Logos/Untersberg.jpg');
-  background-size:cover;background-position:center;background-attachment:scroll;}
+  /* Restore desktop background with fixed attachment as before (relative path) */
+  background-image: linear-gradient(rgba(8,8,8,0.75), rgba(8,8,8,0.8)), url('Logos/Untersberg.jpg');
+  background-size:cover;background-position:center;background-attachment:fixed;}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:2rem;background:rgba(0,0,0,0.45);border-radius:12px}
 .site-header{background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(255,255,255,.04)}
 .site-header .wrap{display:flex;align-items:center;justify-content:space-between}
-.brand{font-family:Montserrat,Plaster,Inter,serif;font-size:1.6rem;color:var(--accent);text-decoration:none}
-nav a{margin-left:1rem;color:var(--text);text-decoration:none}
+.brand{font-family:Montserrat,Plaster,Inter,serif;font-size:1.4rem;color:var(--accent);text-decoration:none}
+nav a{margin-left:1rem;color:var(--text);text-decoration:none;font-size:0.95rem}
 nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8px}
 
 /* Mobile hamburger button */
@@ -26,7 +26,7 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
 
 .hero{padding:3rem 0; color:var(--text); position:relative}
 /* Use correct filename for hero background as well */
-.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('/Logos/Untersberg.jpg');background-size:cover;background-position:center}
+.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('Logos/Untersberg.jpg');background-size:cover;background-position:center}
 .hero-inner{display:flex;gap:2rem;align-items:center}
 .slogan{font-family:Montserrat,Plaster,Inter,serif;font-size:2.2rem;color:#fff;margin:0 0 1rem;letter-spacing:0.2px;text-shadow:0 6px 20px rgba(0,0,0,.7)}
 .lead{font-size:1.05rem;opacity:.95}
@@ -49,9 +49,12 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
 .menu ul{list-style:none;padding:0}
 .menu li{padding:.35rem 0}
 .map-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
-.map-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:8px}
+.map-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:8px;pointer-events:auto;touch-action:auto;-webkit-overflow-scrolling:touch}
 .gallery-grid img{width:100%;border-radius:10px}
 .btn.whatsapp{background:#25D366;color:#fff;border:none}
+
+/* Map hint overlay styles */
+.map-hint{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(0,0,0,0.55);color:#fff;padding:.5rem .8rem;border-radius:8px;font-size:0.95rem;text-align:center;pointer-events:none}
 
 /* Mobile optimizations */
 @media(max-width:600px){
@@ -83,7 +86,20 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
   /* Reduce overlay opacity on mobile so background is more visible */
   .wrap{background:rgba(0,0,0,0.25)}
   /* Use existing JPG for mobile fallback */
-  .hero{background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('/Logos/Untersberg.jpg')}
+  .hero{background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.45)), url('Logos/Untersberg.jpg')}
+}
+
+/* Make mobile background lighter */
+@media(max-width:600px){
+  body{background-image: linear-gradient(rgba(18,18,18,0.55), rgba(18,18,18,0.55)), url('Logos/Untersberg.jpg');}
+  .hero-image img{width:100%;max-width:320px}
+  /* Flo portrait button style */
+  .flo-btn{display:inline-block;border-radius:50%;overflow:hidden;width:56px;height:56px;border:2px solid rgba(255,255,255,0.08);box-shadow:0 6px 14px rgba(0,0,0,0.35)}
+}
+
+/* place Flo logo top-right on subpages */
+@media(min-width:601px){
+  .subpage-flo-logo{position:fixed;top:18px;right:18px;width:72px;height:72px;border-radius:50%;box-shadow:0 8px 20px rgba(0,0,0,.4)}
 }
 
 @media(min-width:601px) and (max-width:900px){
@@ -98,6 +114,6 @@ img{max-width:100%;height:auto;display:block}
 /* Improve touch targets */
 a,button,input,select,textarea{touch-action:manipulation}
 
-/* Lazy-load helper */
-img[loading="lazy"]{opacity:0;transition:opacity .35s ease-in}
+/* Lazy-load helper: show images by default to avoid them being invisible if JS missed the load event */
+img[loading="lazy"]{opacity:1;transition:opacity .35s ease-in}
 img[loading="lazy"].loaded{opacity:1}

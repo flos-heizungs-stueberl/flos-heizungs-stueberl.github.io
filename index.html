@@ -14,16 +14,14 @@
   <header class="site-header">
     <div class="wrap">
       <a class="brand" href="/">Flos Heizungsstüberl</a>
-      <!-- Hamburger toggle for mobile -->
-      <button class="nav-toggle" aria-expanded="false" aria-label="Menü öffnen">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-      <nav id="main-nav" role="navigation" aria-label="Hauptnavigation">
+      <nav>
+        <a href="/">Start</a>
         <a href="speisekarte.html">Speisekarte</a>
         <a href="veranstaltungen.html">Veranstaltungen</a>
         <a href="stammtisch.html">Stammtisch</a>
         <a href="hochzeiten.html">Hochzeiten</a>
         <a href="gallery.html">Galerie</a>
+        <a href="ueber-uns.html">Über uns</a>
         <a href="kontakt.html" class="cta">Kontakt</a>
       </nav>
     </div>
@@ -34,15 +32,14 @@
       <div class="wrap hero-inner">
         <div class="hero-text">
           <h1 class="slogan">Flos Heizungsstüberl — Heißer Ofen, kaltes Bier, laute Stimmung</h1>
-          <p class="lead">Heizung an, Bier kalt.</p>
           <p class="buttons">
             <a href="speisekarte.html" class="btn">Speisekarte ansehen</a>
             <a href="veranstaltungen.html" class="btn ghost">Events &amp; Termine</a>
           </p>
         </div>
         <div class="hero-image">
-          <!-- Verwende lokales Hofbräuhaus-Bild aus Logos -->
-          <img src="Logos/Hofbrauhaus_Berchtesgaden.jpg" alt="Hofbräuhaus Maß Bier" loading="lazy">
+          <!-- Verwende Flo-Logo im Hero -->
+          <img src="Bilder/Logo_Flo.png" alt="Flos Logo" loading="eager">
         </div>
       </div>
     </section>
@@ -55,23 +52,27 @@
           <li>So: 12:00–23:00 — Sonntags: Daydrinking Deluxe ab 12 Uhr</li>
         </ul>
         <p class="highlight">Mittwochs: Goaßenmaß‑Special — Eck Michi mixt die legendäre Goaßenmaß für echte Kenner.</p>
+        <!-- Michi Porträt neben dem Special -->
+        <img src="Bilder/Michi_portraet.jpg" alt="Michi Portrait" style="width:120px;border-radius:8px;margin-top:0.6rem">
       </div>
       <div class="col">
         <h3>Was dich erwartet</h3>
         <p>Typisch bayerische Küche, herzliche Atmosphäre und jede Menge Aperol. Laura Berg kocht — gute Laune inklusive. Wanderer sind herzlich willkommen auf ein kühles Bier.</p>
-        <p class="fun">Bei uns gilt: "Mahlzeit? Nein — Maß‑zeit!" Essen rein, Maß her, Sorgen weg.</p>
+        <p class="fun">Aperol im Stüberl, Untersberg im Blick: So schmeckt der Oimberg‑Sommer</p>
+        <!-- Hofbräuhaus Logo weiter unten in diesem Abschnitt -->
+        <img src="Logos/Hofbrauhaus_Berchtesgaden.jpg" alt="Hofbräuhaus Berchtesgaden" style="width:140px;margin-top:0.8rem;border-radius:8px">
       </div>
     </section>
 
     <section class="about wrap">
       <h2>Über uns</h2>
       <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
-        <img src="Logos/Laura_Berg.jpg" alt="Laura Berg" style="width:220px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.3)">
-        <div>
-          <h3>Laura Berg — 30 Jahre, Erzieherin</h3>
-          <p>Laura ist neu am Ettenberg (bei Einheimischen auch liebevoll "Oimberg" genannt) und hat sich entschlossen, die Küche im Heizungsstüberl zu übernehmen. Mit Herz, Handschuhen und einer Portion Bayernsinn kocht sie deftig, ehrlich und immer mit einem Augenzwinkern.</p>
-          <h3>Florian "Flo" Aschauer — 26 Jahre, Heizungsbauer</h3>
-          <p>Flo ist Heizungsbauer aus Leidenschaft und gebürtiger Ettenberger — oder wie man hier sagt: ein echter Oimberger. Wenn er nicht gerade die Heizung aufdreht, schenkt er Bier aus, sorgt dafür, dass die Stimmung warm bleibt und legt als DJ mit seiner JBL Box auf — seine legendäre Spotify‑Playlist bringt die Hütte zum Kochen.</p>
+        <div style="flex:1">
+          <p>Laura und Flo — die Köpfe hinter dem Heizungsstüberl. Deftige Küche, warme Heizung, laute Musik und ein Herz für Wanderer.</p>
+          <p><a href="ueber-uns.html" class="btn">Mehr erfahren → Über uns</a></p>
+        </div>
+        <div style="flex:0 0 140px">
+          <img src="Bilder/Flo_portraet_2.jpg" alt="Flo" style="width:140px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.3)">
         </div>
       </div>
     </section>

@@ -13,6 +13,11 @@
       <nav>
         <a href="/">Start</a>
         <a href="speisekarte.html">Speisekarte</a>
+        <a href="veranstaltungen.html">Veranstaltungen</a>
+        <a href="stammtisch.html">Stammtisch</a>
+        <a href="hochzeiten.html">Hochzeiten</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="ueber-uns.html">Über uns</a>
         <a href="kontakt.html" class="cta">Kontakt</a>
       </nav>
     </div>
@@ -26,12 +31,17 @@
     <form action="https://formsubmit.co/ponnei@gmx.de" method="POST">
       <input type="hidden" name="_subject" value="Hochzeitsanfrage">
       <label>Name<br><input type="text" name="name" required></label><br>
-      <label>Telefon<br><input type="tel" name="phone" value="01718906893" required></label><br>
+      <label>Telefon<br><input type="tel" name="phone" placeholder="Wird nicht öffentlich angezeigt" required></label><br>
       <label>Datum (Wunsch)<br><input type="date" name="date"></label><br>
       <label>Personen<br><input type="number" name="people" min="1" max="200"></label><br>
       <label>Nachricht<br><textarea name="message"></textarea></label><br>
       <button type="submit" class="btn">Anfrage absenden</button>
     </form>
+
+    <!-- Flo seriös Bild neben dem Formular -->
+    <div style="margin-top:1rem">
+      <img src="Bilder/Flo_serioes.jpg" alt="Flo seriös" style="width:220px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.25)">
+    </div>
 
   </main>
 
