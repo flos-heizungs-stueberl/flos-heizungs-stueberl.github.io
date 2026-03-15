@@ -1,0 +1,46 @@
+/* Stylesheet für Flos Heizungsstüberl - modern, bayerisch angehaucht, dunkles Theme */
+:root{--wrap:1100px;--accent:#d6452a;--muted:#bfc7cc;--bg:#0b0b0b;--text:#ffffff}
+*{box-sizing:border-box}
+body{font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:var(--text);
+  background-image: linear-gradient(rgba(8,8,8,0.75), rgba(8,8,8,0.8)), url('Logos/untersberg.jpg');
+  background-size:cover;background-position:center;background-attachment:fixed;}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:2rem;background:rgba(0,0,0,0.45);border-radius:12px}
+.site-header{background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(255,255,255,.04)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between}
+.brand{font-family:Montserrat,Plaster,Inter,serif;font-size:1.6rem;color:var(--accent);text-decoration:none}
+nav a{margin-left:1rem;color:var(--text);text-decoration:none}
+nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8px}
+.hero{padding:3rem 0; color:var(--text); position:relative}
+.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('Logos/untersberg.jpg');background-size:cover;background-position:center}
+.hero-inner{display:flex;gap:2rem;align-items:center}
+.hero-text{flex:1}
+.slogan{font-family:Montserrat,Plaster,Inter,serif;font-size:2.2rem;color:#fff;margin:0 0 1rem;letter-spacing:0.2px;text-shadow:0 6px 20px rgba(0,0,0,.7)}
+.lead{font-size:1.05rem;opacity:.95}
+.buttons .btn{display:inline-block;margin-right:.6rem;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+.buttons .ghost{background:transparent;border:1px solid rgba(255,255,255,.15);color:#fff}
+.hero-image img{width:420px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.55);filter:grayscale(10%) brightness(78%);opacity:0.98}
+.partners{padding:2rem 0;background:transparent}
+.partner-logos{display:flex;gap:1.2rem;align-items:center}
+.partner-logos img{height:56px;object-fit:contain;filter:brightness(1);background:transparent}
+.info{display:flex;gap:2rem;padding:2rem 0}
+.info .col{flex:1;background:rgba(255,255,255,0.03);padding:1.2rem;border-radius:12px}
+.highlight{color:var(--accent);font-weight:700}
+.cta-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;padding:2rem 0}
+.cta-cards article{background:rgba(255,255,255,0.03);padding:1.2rem;border-radius:12px}
+.instagram{padding:2rem 0}
+.site-footer{padding:1.2rem 0;background:transparent;border-top:1px solid rgba(255,255,255,.04)}
+.link{color:var(--accent);text-decoration:none}
+.muted{color:var(--muted)}
+.fun{font-style:italic;color:#eee}
+.menu ul{list-style:none;padding:0}
+.menu li{padding:.35rem 0}
+.map-wrapper{position:relative;padding-bottom:56.25%;height:0;overflow:hidden}
+.map-wrapper iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:8px}
+.gallery-grid img{width:100%;border-radius:10px}
+.btn.whatsapp{background:#25D366;color:#fff;border:none}
+@media(max-width:900px){
+  .hero-inner{flex-direction:column}
+  .hero-image img{width:100%}
+  .cta-cards{grid-template-columns:1fr}
+  .slogan{font-size:1.6rem}
+}

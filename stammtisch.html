@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Stammtisch — Flos Heizungsstüberl</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Flos Heizungsstüberl</a>
+      <nav>
+        <a href="/">Start</a>
+        <a href="speisekarte.html">Speisekarte</a>
+        <a href="kontakt.html" class="cta">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Stammtisch in der Heizung</h1>
+    <p>Unsere Heizung — powered by Hargassner — bietet ein gemütliches Setting für Stammtische bis zu 30 Personen. Sitzanordnung und Tische können flexibel gestellt werden. Ideal für Vereinsabende, Geburtstagsrunden oder einfach zum Bieraustausch.</p>
+
+    <div class="heater-room">
+      <img src="https://images.unsplash.com/photo-1463100090973-7a8e488a3e5b?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=555" alt="Heater Room" style="width:100%;border-radius:12px">
+      <p class="muted">Illustratives Raumfoto mit moderner Hargassner Heizungsinstallation und ansprechender Tischaufstellung.</p>
+    </div>
+
+    <h2>Regelmäßiger Stammtisch</h2>
+    <p>Jeden Sonntag Nachmittag treffen sich Freunde, Wanderer und Durstige zum Stammtisch — unser Sonntags‑Daydrinking ist legendär. Kommt um 15:00 vorbei: Bier in der Hand, Sonne im Herzen.</p>
+    <p class="fun">Spruch: "Sonntags: Wir wandern zur Almbachklamm und landen im Wärmsten — zum Daydrinking mit Stil."</p>
+
+    <h2>Reservierung Stammtisch</h2>
+    <form action="https://formsubmit.co/ponnei@gmx.de" method="POST">
+      <input type="hidden" name="_subject" value="Stammtisch Reservierung">
+      <label>Name<br><input type="text" name="name" required></label><br>
+      <label>Telefon<br><input type="tel" name="phone" value="01718906893" required></label><br>
+      <label>Datum<br><input type="date" name="date" required></label><br>
+      <label>Personen<br><input type="number" name="people" min="1" max="30" required></label><br>
+      <button type="submit" class="btn">Reservieren</button>
+    </form>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Flos Heizungsstüberl — Hinterettenberg 8, 83487 Marktschellenberg • <a href="impressum.html">Impressum</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Veranstaltungen — Flos Heizungsstüberl</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Flos Heizungsstüberl</a>
+      <nav>
+        <a href="/">Start</a>
+        <a href="speisekarte.html">Speisekarte</a>
+        <a href="kontakt.html" class="cta">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Veranstaltungen</h1>
+
+    <section class="event">
+      <h2>Sonntags Daydrinking</h2>
+      <p>Jeden Sonntag ab 12:00 — Daydrinking Deluxe. Günstige Aperol, kühles Hofbräu und gute Stimmung. Sei früh da!</p>
+      <!-- People clinking beer glasses -->
+      <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=1a2b3c" alt="People clinking beer glasses" style="width:100%;border-radius:12px;margin-top:1rem">
+    </section>
+
+    <section class="event">
+      <h2>Stammtische in der Heizung</h2>
+      <p>Regelmäßige Stammtische für bis zu 30 Personen. Gemütliche Anordnung rund um die Hargassner Heizung. <a href="stammtisch.html">Mehr Infos &amp; Reservierung</a></p>
+      <!-- Cozy indoor table, drinks -->
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=222" alt="Stammtisch im Gastraum" style="width:100%;border-radius:12px;margin-top:1rem">
+    </section>
+
+    <section class="event">
+      <h2>Osterbiersuche — 5. April 2026</h2>
+      <p>Feiert mit uns Lauras Einzug: Wir verstecken Bier in der Umgebung von Hinterettenberg 8. Wer ein Bier findet, darf es austrinken. Anmeldung über das Event‑Formular.</p>
+      <!-- Beer bottles hidden in grass / outdoor hunt -->
+      <img src="https://images.unsplash.com/photo-1469474968028-2f9f6b2d4f9a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=444" alt="Osterbiersuche im Gras" style="width:100%;border-radius:12px;margin-top:1rem">
+    </section>
+
+    <section class="event">
+      <h2>Buchen: Hochzeiten &amp; Gartenfeste</h2>
+      <p>Garten für bis zu 150 Personen. Anfrage über das Buchungsformular.</p>
+      <!-- Wedding celebration image -->
+      <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=444" alt="Wedding party" style="width:100%;border-radius:12px;margin-top:1rem">
+    </section>
+
+    <h3>Eventformular</h3>
+    <form action="https://formsubmit.co/ponnei@gmx.de" method="POST">
+      <input type="hidden" name="_subject" value="Event-Anfrage von der Website">
+      <input type="hidden" name="_template" value="table">
+      <label>Name<br><input type="text" name="name" required></label><br>
+      <label>E‑Mail (für Rückfrage)<br><input type="email" name="email" required></label><br>
+      <label>Event-Typ<br><select name="type"><option>Stammtisch</option><option>Hochzeit</option><option>Osterbiersuche</option><option>Sonstiges</option></select></label><br>
+      <label>Datum (Wunsch)<br><input type="date" name="date"></label><br>
+      <label>Teilnehmerzahl<br><input type="number" name="people" min="1" max="500"></label><br>
+      <label>Nachricht<br><textarea name="message"></textarea></label><br>
+      <button type="submit" class="btn">Anfrage absenden</button>
+    </form>
+
+    <p class="muted">Hinweis: Wir verwenden FormSubmit als einfachen Kontakt‑Mailer. Die E‑Mailadresse wird nicht angezeigt.</p>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Flos Heizungsstüberl — Hinterettenberg 8, 83487 Marktschellenberg • <a href="impressum.html">Impressum</a></p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -3,21 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Hallo Welt — flos Heizungs Stüberl</title>
-  <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;margin:3rem;background:#f7f7f7;color:#111}
-    .card{background:#fff;padding:2rem;border-radius:12px;max-width:720px;margin:auto;box-shadow:0 6px 20px rgba(0,0,0,.06)}
-    h1{margin-top:0}
-    code{background:#f2f4f7;padding:.15rem .4rem;border-radius:6px}
-    a{color:#0366d6}
-  </style>
+  <title>Flos Heizungsstüberl — Marktschellenberg</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Flos Heizungsstüberl in Marktschellenberg — Bistro, Bier & sonntägliches Daydrinking. Speisekarte, Veranstaltungen & Reservierung.">
 </head>
 <body>
-  <div class="card">
-    <h1>Hallo Welt</h1>
-    <p>Dies ist eine einfache "Hello World"-Homepage, bereitgestellt über GitHub Pages.</p>
-    <p>Zum Veröffentlichen: Repository auf GitHub pushen und in den Einstellungen unter "Pages" den Branch <code>main</code> (oder <code>gh-pages</code>) im Ordner <code>/ (root)</code> auswählen.</p>
-    <p>Wenn das Repository <em>username.github.io</em> heißt, wird die Seite unter <code>https://username.github.io/</code> erreichbar sein; sonst unter <code>https://username.github.io/repo-name</code>.</p>
-  </div>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/">Flos Heizungsstüberl</a>
+      <nav>
+        <a href="speisekarte.html">Speisekarte</a>
+        <a href="veranstaltungen.html">Veranstaltungen</a>
+        <a href="stammtisch.html">Stammtisch</a>
+        <a href="hochzeiten.html">Hochzeiten</a>
+        <a href="gallery.html">Galerie</a>
+        <a href="kontakt.html" class="cta">Kontakt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-text">
+          <h1 class="slogan">Flos Heizungsstüberl — Heißer Ofen, kaltes Bier, laute Stimmung</h1>
+          <p class="lead">Heizung an, Bier kalt.</p>
+          <p class="buttons">
+            <a href="speisekarte.html" class="btn">Speisekarte ansehen</a>
+            <a href="veranstaltungen.html" class="btn ghost">Events &amp; Termine</a>
+          </p>
+        </div>
+        <div class="hero-image">
+          <!-- Verwende lokales Hofbräuhaus-Bild aus Logos -->
+          <img src="Logos/hofbrauhaus_berchtesgaden.jpg" alt="Hofbräuhaus Maß Bier">
+        </div>
+      </div>
+    </section>
+
+    <section class="info wrap">
+      <div class="col">
+        <h3>Öffnungszeiten</h3>
+        <ul>
+          <li>Mo–Sa: 17:00–22:00</li>
+          <li>So: 12:00–23:00 — Sonntags: Daydrinking Deluxe ab 12 Uhr</li>
+        </ul>
+        <p class="highlight">Mittwochs: Goaßenmaß‑Special — Eck Michi mixt die legendäre Goaßenmaß für echte Kenner.</p>
+      </div>
+      <div class="col">
+        <h3>Was dich erwartet</h3>
+        <p>Typisch bayerische Küche, herzliche Atmosphäre und jede Menge Aperol. Laura Berg kocht — gute Laune inklusive. Wanderer sind herzlich willkommen auf ein kühles Bier.</p>
+        <p class="fun">Bei uns gilt: "Mahlzeit? Nein — Maß‑zeit!" Essen rein, Maß her, Sorgen weg.</p>
+      </div>
+    </section>
+
+    <section class="about wrap">
+      <h2>Über uns</h2>
+      <div style="display:flex;gap:1rem;align-items:center;flex-wrap:wrap">
+        <img src="Logos/Laura_Berg.jpg" alt="Laura Berg" style="width:220px;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.3)">
+        <div>
+          <h3>Laura Berg — 30 Jahre, Erzieherin</h3>
+          <p>Laura ist neu am Ettenberg (bei Einheimischen auch liebevoll "Oimberg" genannt) und hat sich entschlossen, die Küche im Heizungsstüberl zu übernehmen. Mit Herz, Handschuhen und einer Portion Bayernsinn kocht sie deftig, ehrlich und immer mit einem Augenzwinkern.</p>
+          <h3>Florian "Flo" Aschauer — 26 Jahre, Heizungsbauer</h3>
+          <p>Flo ist Heizungsbauer aus Leidenschaft und gebürtiger Ettenberger — oder wie man hier sagt: ein echter Oimberger. Wenn er nicht gerade die Heizung aufdreht, schenkt er Bier aus, sorgt dafür, dass die Stimmung warm bleibt und legt als DJ mit seiner JBL Box auf — seine legendäre Spotify‑Playlist bringt die Hütte zum Kochen.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-cards wrap">
+      <article>
+        <h4>Stammtisch</h4>
+        <p>Platz für maximal 30 Personen in der Heizung — reserviere deinen Tisch.</p>
+        <p><a href="stammtisch.html" class="link">Mehr erfahren</a></p>
+      </article>
+      <article>
+        <h4>Garten &amp; Hochzeiten</h4>
+        <p>Feiern im Freien für bis zu 150 Personen — Hochzeitsbuchungen möglich.</p>
+        <p><a href="hochzeiten.html" class="link">Anfragen</a></p>
+      </article>
+    </section>
+
+    <section class="instagram wrap">
+      <h3>Folgt uns</h3>
+      <p>Flo: <a href="https://www.instagram.com/floaschauer?igsh=bDdkb3ZwdTlyeHhu" target="_blank">@floaschauer</a> • Laura: <a href="https://www.instagram.com/_lauramaria__?igsh=Y3BoZnE2eTNtZHJj" target="_blank">@_lauramaria__</a></p>
+    </section>
+
+    <!-- Partner-Logos jetzt am Seitenende -->
+    <section class="partners wrap">
+      <h2>Unsere Freunde &amp; Sponsoren</h2>
+      <div class="partner-logos">
+        <a href="https://www.hofbrauhaus-berchtesgaden.shop/" target="_blank" rel="noopener">
+          <img src="Logos/hofbrauhaus_berchtesgaden.jpg" alt="Hofbräuhaus Berchtesgaden">
+        </a>
+        <a href="https://www.franziskaner-weissbier.de/" target="_blank" rel="noopener">
+          <img src="Logos/franziskaner.jpg" alt="Franziskaner Weißbier">
+        </a>
+        <a href="https://www.hargassner.com/de-de" target="_blank" rel="noopener">
+          <img src="Logos/hargassner.jpg" alt="Hargassner Heizung">
+        </a>
+      </div>
+      <div class="partner-links" style="margin-top:0.8rem">
+        <a href="https://www.hofbrauhaus-berchtesgaden.shop/" target="_blank">Hofbräuhaus Berchtesgaden</a> • 
+        <a href="https://www.franziskaner-weissbier.de/" target="_blank">Franziskaner Weißbier</a> • 
+        <a href="https://www.hargassner.com/de-de" target="_blank">Hargassner</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Flos Heizungsstüberl — Hinterettenberg 8, 83487 Marktschellenberg • <a href="gallery.html">Galerie</a> • <a href="impressum.html">Impressum</a></p>
+    </div>
+  </footer>
 </body>
 </html>
