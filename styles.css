@@ -50,12 +50,12 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
   .slogan{font-size:1.4rem}
   .lead{font-size:1rem}
   .hero-image img{width:100%;max-width:420px}
-  .buttons .btn{display:block;width:100%;margin:0 0 .6rem}
-  .buttons .ghost{width:100%}
+  .buttons .btn{display:block;width:100%;margin:0 0 .6rem;padding:0.9rem 1rem;font-size:1rem}
+  .buttons .ghost{width:100%;background:transparent;border:2px solid rgba(255,255,255,.15);color:var(--text)}
   .info{flex-direction:column}
   .info .col{padding:1rem}
   .partner-logos{justify-content:center;flex-wrap:wrap}
-  .partner-logos img{height:48px}
+  .partner-logos img{height:48px;filter:none;background:rgba(255,255,255,0.02);padding:.3rem;border-radius:8px}
   .cta-cards{grid-template-columns:1fr}
   .menu li{font-size:1rem}
   .map-wrapper{padding-bottom:56.25%}
@@ -72,3 +72,7 @@ img{max-width:100%;height:auto;display:block}
 
 /* Improve touch targets */
 a,button,input,select,textarea{touch-action:manipulation}
+
+/* Lazy-load helper */
+img[loading="lazy"]{opacity:0;transition:opacity .35s ease-in}
+img[loading="lazy"].loaded{opacity:1}

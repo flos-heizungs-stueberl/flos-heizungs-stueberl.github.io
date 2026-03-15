@@ -36,7 +36,7 @@
         </div>
         <div class="hero-image">
           <!-- Verwende lokales Hofbräuhaus-Bild aus Logos -->
-          <img src="Logos/hofbrauhaus_berchtesgaden.jpg" alt="Hofbräuhaus Maß Bier">
+          <img src="Logos/Hofbrauhaus_Berchtesgaden.jpg" alt="Hofbräuhaus Maß Bier" loading="lazy">
         </div>
       </div>
     </section>
@@ -93,13 +93,13 @@
       <h2>Unsere Freunde &amp; Sponsoren</h2>
       <div class="partner-logos">
         <a href="https://www.hofbrauhaus-berchtesgaden.shop/" target="_blank" rel="noopener">
-          <img src="Logos/hofbrauhaus_berchtesgaden.jpg" alt="Hofbräuhaus Berchtesgaden">
+          <img src="Logos/Hofbrauhaus_Berchtesgaden.jpg" alt="Hofbräuhaus Berchtesgaden" loading="lazy">
         </a>
         <a href="https://www.franziskaner-weissbier.de/" target="_blank" rel="noopener">
           <img src="Logos/franziskaner.jpg" alt="Franziskaner Weißbier">
         </a>
         <a href="https://www.hargassner.com/de-de" target="_blank" rel="noopener">
-          <img src="Logos/hargassner.jpg" alt="Hargassner Heizung">
+          <img src="Logos/Hargassner.jpg" alt="Hargassner Heizung">
         </a>
       </div>
       <div class="partner-links" style="margin-top:0.8rem">
@@ -115,5 +115,13 @@
       <p>Flos Heizungsstüberl — Hinterettenberg 8, 83487 Marktschellenberg • <a href="gallery.html">Galerie</a> • <a href="impressum.html">Impressum</a></p>
     </div>
   </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      document.querySelectorAll('img[loading="lazy"]').forEach(function(img){
+        img.addEventListener('load', function(){ img.classList.add('loaded'); });
+      });
+    });
+  </script>
 </body>
 </html>
