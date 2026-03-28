@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Vorübergehend geschlossen — Flos Heizungsstüberl</title>
+  <style>
+    :root{--accent:#d6452a}
+    html,body{height:100%;margin:0;font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    body{
+      background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('Logos/Untersberg.jpg');
+      background-size:cover;background-position:center;background-attachment:fixed;color:#fff;display:flex;align-items:center;justify-content:center;
+    }
+    .overlay{width:100%;max-width:900px;padding:3rem;border-radius:12px;background:rgba(0,0,0,0.35);text-align:center}
+    h1{font-size:clamp(1.6rem,4.5vw,3.2rem);margin:0 0 1rem 0;line-height:1.05}
+    p.lead{opacity:.9;margin:0 0 1.6rem 0;font-size:1.05rem}
+    .countdown{display:flex;gap:0.8rem;justify-content:center;flex-wrap:wrap}
+    .countdown .unit{background:rgba(255,255,255,0.06);padding:1rem 1.2rem;border-radius:10px;min-width:88px}
+    .countdown .num{font-size:1.6rem;font-weight:700}
+    .countdown .label{font-size:0.85rem;opacity:.85}
+    a.link{display:inline-block;margin-top:1.2rem;padding:.6rem 1rem;border-radius:8px;background:var(--accent);color:#fff;text-decoration:none}
+    @media(max-width:600px){
+      body{background-attachment:scroll}
+      .overlay{padding:1.2rem;margin:1rem;border-radius:10px}
+      .countdown .unit{min-width:72px;padding:.8rem}
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay" role="main">
+    <h1>Die Tränke hat vorübergehend geschlossen</h1>
+    <p class="lead">Wir sind bald wieder für euch da</p>
+
+    <div class="countdown" aria-live="polite" id="countdown">
+      <div class="unit"><div class="num" id="days">--</div><div class="label">Tage</div></div>
+      <div class="unit"><div class="num" id="hours">--</div><div class="label">Stunden</div></div>
+      <div class="unit"><div class="num" id="minutes">--</div><div class="label">Minuten</div></div>
+      <div class="unit"><div class="num" id="seconds">--</div><div class="label">Sekunden</div></div>
+    </div>
+
+  </div>
+
+  <script>
+    // Ziel: 5. April 2026, 14:00 MESZ (UTC+2) -> UTC 2026-04-05 12:00:00Z
+    var target = Date.UTC(2026,3,5,12,0,0); // months: 0=Jan, so 3=April
+    function update(){
+      var now = Date.now();
+      var diff = target - now;
+      if(diff <= 0){
+        document.getElementById('countdown').innerHTML = '<div style="font-weight:700;font-size:1.2rem">Die Tränke ist wieder geöffnet!</div>';
+        clearInterval(timer);
+        return;
+      }
+      var s = Math.floor(diff/1000);
+      var days = Math.floor(s/86400); s -= days*86400;
+      var hours = Math.floor(s/3600); s -= hours*3600;
+      var minutes = Math.floor(s/60); var seconds = s - minutes*60;
+      document.getElementById('days').textContent = String(days);
+      document.getElementById('hours').textContent = String(hours).padStart(2,'0');
+      document.getElementById('minutes').textContent = String(minutes).padStart(2,'0');
+      document.getElementById('seconds').textContent = String(seconds).padStart(2,'0');
+    }
+    update();
+    var timer = setInterval(update,1000);
+  </script>
+</body>
+</html>
