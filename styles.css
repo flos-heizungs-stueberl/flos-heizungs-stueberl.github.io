@@ -3,7 +3,7 @@
 *{box-sizing:border-box}
 body{font-family:Inter,Montserrat,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:var(--text);
   /* Restore desktop background with fixed attachment as before (relative path) */
-  background-image: linear-gradient(rgba(8,8,8,0.75), rgba(8,8,8,0.8)), url('Logos/Untersberg.jpg');
+  background-image: linear-gradient(rgba(8,8,8,0.65), rgba(8,8,8,0.7)), url('Logos/Untersberg.jpg');
   background-size:cover;background-position:center;background-attachment:fixed;}
 .wrap{max-width:var(--wrap);margin:0 auto;padding:2rem;background:rgba(0,0,0,0.45);border-radius:12px}
 .site-header{background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);position:sticky;top:0;z-index:40;border-bottom:1px solid rgba(255,255,255,.04)}
@@ -26,7 +26,7 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
 
 .hero{padding:3rem 0; color:var(--text); position:relative}
 /* Use correct filename for hero background as well */
-.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('Logos/Untersberg.jpg');background-size:cover;background-position:center}
+/*.hero{background-image:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.65)), url('Logos/Untersberg.jpg');background-size:cover;background-position:center}*/
 .hero-inner{display:flex;gap:2rem;align-items:center}
 .slogan{font-family:Montserrat,Plaster,Inter,serif;font-size:2.2rem;color:#fff;margin:0 0 1rem;letter-spacing:0.2px;text-shadow:0 6px 20px rgba(0,0,0,.7)}
 .lead{font-size:1.05rem;opacity:.95}
@@ -91,7 +91,7 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
 
 /* Make mobile background lighter */
 @media(max-width:600px){
-  body{background-image: linear-gradient(rgba(18,18,18,0.55), rgba(18,18,18,0.55)), url('Logos/Untersberg.jpg');}
+  body{background-image: linear-gradient(rgba(18,18,18,0.45), rgba(18,18,18,0.45)), url('Logos/Untersberg.jpg');}
   .hero-image img{width:100%;max-width:320px}
   /* Flo portrait button style */
   .flo-btn{display:inline-block;border-radius:50%;overflow:hidden;width:56px;height:56px;border:2px solid rgba(255,255,255,0.08);box-shadow:0 6px 14px rgba(0,0,0,0.35)}
