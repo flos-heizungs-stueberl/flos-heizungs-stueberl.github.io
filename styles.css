@@ -119,3 +119,7 @@ a,button,input,select,textarea{touch-action:manipulation}
 /* Lazy-load helper: show images by default to avoid them being invisible if JS missed the load event */
 img[loading="lazy"]{opacity:1;transition:opacity .35s ease-in}
 img[loading="lazy"].loaded{opacity:1}
+
+a {
+  color: var(--accent);
+}
