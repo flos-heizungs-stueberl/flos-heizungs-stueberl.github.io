@@ -43,6 +43,8 @@ nav .cta{background:var(--accent);color:#fff;padding:.5rem .8rem;border-radius:8
 .cta-cards article{background:rgba(255,255,255,0.03);padding:1.2rem;border-radius:12px}
 .instagram{padding:2rem 0}
 .site-footer{padding:1.2rem 0;background:transparent;border-top:1px solid rgba(255,255,255,.04)}
+.visit-counter{margin-top:.5rem;font-size:.8rem;color:var(--muted);letter-spacing:.02em}
+.visit-counter strong{color:var(--accent)}
 .link{color:var(--accent);text-decoration:none}
 .muted{color:var(--muted)}
 .fun{font-style:italic;color:#eee}
