@@ -131,27 +131,11 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>Flo's Heizungsstüberl — Hinterettenberg 8, 83487 Marktschellenberg • <a href="gallery.html">Galerie</a> • <a href="impressum.html">Impressum</a></p>
-      <p class="visit-counter">👀 Diese Seite wurde bereits <strong id="visit-count">…</strong> mal besucht</p>
+      <p class="visit-counter">👀 Besucher: <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fflos-heizungs-stueberl.github.io&count_bg=%23D6452A&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=Besuche&edge_flat=true" alt="Besucherzähler" style="vertical-align:middle;height:20px"></p>
     </div>
   </footer>
 
   <script>
-    // Visitor counter — increments once per browser session
-    (function(){
-      var countEl = document.getElementById('visit-count');
-      if(!countEl) return;
-      var api = 'https://api.counterapi.dev/v1/flos-heizungs-stueberl/homepage/';
-      var alreadyCounted = sessionStorage.getItem('visited');
-      var endpoint = alreadyCounted ? 'get' : 'up';
-      fetch(api + endpoint)
-        .then(function(r){ return r.ok ? r.json() : Promise.reject(); })
-        .then(function(d){
-          countEl.textContent = (d.count || 0).toLocaleString('de-DE');
-          if(!alreadyCounted) sessionStorage.setItem('visited','1');
-        })
-        .catch(function(){ countEl.textContent = '–'; });
-    })();
-
     document.addEventListener('DOMContentLoaded', function(){
       document.querySelectorAll('img[loading="lazy"]').forEach(function(img){
         img.addEventListener('load', function(){ img.classList.add('loaded'); });
